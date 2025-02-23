@@ -1,0 +1,27 @@
+#install angular w tailwindcss
+``--
+npm install -g @angular/cli
+ng new angulartest2 --style css
+cd angulartest2
+npm install tailwindcss @tailwindcss/postcss postcss --force
+``---------------------------------
+#configure tailwind plugins and put this code (create file named '.postcssrc.json' inside src folder)
+``--
+{
+  "plugins": {
+    "@tailwindcss/postcss": {}
+  }
+}
+``---------------------------------
+#import tailwind in styles.css
+``--
+@import "tailwindcss";
+``---------------------------------
+#add component (box component)
+``--
+ng generate box
+``----------------------------------
+#start server (localhost:4200)
+``--
+ng serve
+``----------------------------------
