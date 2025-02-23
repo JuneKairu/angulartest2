@@ -19,9 +19,35 @@ npm install tailwindcss @tailwindcss/postcss postcss --force
 ``---------------------------------
 #add component (box component)
 ``--
-ng generate box
+ng generate component box
+
 ``----------------------------------
 #start server (localhost:4200)
 ``--
 ng serve
 ``----------------------------------
+#setup backend
+``--
+npm init -y
+npm install express axios cors mongodb
+
+(create file named 'api.service.ts' inside src folder)
+(create folder named 'server' outside src)
+(create file named 'server.js' inside server folder)
+``-----------------------------------
+#setup mongodb (create acc in mongodb atlas)
+``--
+create organization
+create project
+create cluster >> use google cloud as provider >> region : singapore >> deploy
+set your cluster's app development to 'javascript/node.js'
+go to 'database access' >> add new database user >> set role to admin >> create username and password
+``-----------------------------------
+#mongodb compass setup (create new connection)
+``--
+set name connection >> advance connection options >> authentication >> set your username and password created in cluster
+edit connection string
+
+mongodb+srv://angulartest:<your password>@angular-test.469xr.mongodb.net/?retryWrites=true&w=majority&appName=angular-test
+
+once connected, create database >> create collection under database >> add data
