@@ -1,0 +1,6 @@
+<div class="grid grid-cols-5 gap-2 mt-10 justify-center">
+  <div class="ml-4 w-40 h-20 flex flex-col items-center justify-center text-center text-white p-2" *ngFor="let box of boxes" [ngClass]="getBoxClass(box)">
+    <h4>{{ box.title}}</h4>
+    <p>{{ box.body}}</p>
+  </div>
+</div>
